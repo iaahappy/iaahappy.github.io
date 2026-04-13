@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --cm-ink: #1a2e23;
+  --cm-deep: #2d4a3a;
+  --cm-moss: #5a7a5a;
+  --cm-sage: #a8b8a0;
+  --cm-cream: #f5f1e8;
+  --cm-paper: #faf7f0;
+  --cm-gold: #b8985a;
+  --cm-shadow: rgba(26, 46, 35, 0.08);
+  --background: var(--cm-paper);
+  --foreground: var(--cm-ink);
+}
+
+@theme inline {
+  --color-cm-ink: var(--cm-ink);
+  --color-cm-deep: var(--cm-deep);
+  --color-cm-moss: var(--cm-moss);
+  --color-cm-sage: var(--cm-sage);
+  --color-cm-cream: var(--cm-cream);
+  --color-cm-paper: var(--cm-paper);
+  --color-cm-gold: var(--cm-gold);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--cm-gold);
+  outline-offset: 3px;
+}
+
+@layer utilities {
+  .font-myeongjo {
+    font-family: "Nanum Myeongjo", ui-serif, serif;
+  }
+  .font-body {
+    font-family: "Noto Serif KR", ui-serif, serif;
+  }
+}
