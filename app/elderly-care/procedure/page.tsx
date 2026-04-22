@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { elderlyCareCenter } from "@/lib/site-contact";
 
 export const metadata: Metadata = {
   title: "이용 절차",
@@ -145,7 +146,7 @@ export default function ElderlyProcedurePage() {
           <dl className="space-y-3 text-base md:text-lg">
             <div>
               <dt className="font-semibold text-cm-moss">전화 상담</dt>
-              <dd>[센터 대표번호 자리표시자]</dd>
+              <dd>노인요양센터 전용 번호는 별도 안내 예정입니다.</dd>
             </div>
             <div>
               <dt className="font-semibold text-cm-moss">운영 시간</dt>
@@ -153,7 +154,12 @@ export default function ElderlyProcedurePage() {
             </div>
             <div>
               <dt className="font-semibold text-cm-moss">주소</dt>
-              <dd>[센터 주소 자리표시자]</dd>
+              <dd>
+                {elderlyCareCenter.address}
+                <span className="mt-2 block text-base text-cm-moss">
+                  ※ {elderlyCareCenter.addressNote}
+                </span>
+              </dd>
             </div>
           </dl>
         </section>

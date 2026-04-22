@@ -2,64 +2,62 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "재가노인요양센터",
-  description: "청목노인요양센터 센터장 인사말 및 안내",
+  title: "청목 장애인활동지원센터",
+  description: "청목 장애인활동지원센터 센터장 인사말 및 안내",
 };
 
-export default function ElderlyCarePage() {
+export default function CheongmokDisabledSupportPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 md:py-24">
       <article>
         <header className="border-b border-cm-gold/30 pb-8 text-center">
           <h1 className="font-myeongjo text-3xl font-bold tracking-tight text-cm-deep md:text-4xl">
-            재가노인요양센터
+            청목 장애인활동지원센터
           </h1>
-          <p className="mt-4 text-lg font-medium text-cm-moss md:text-xl">
-            센터장 인사말
+          <p className="mt-4 text-xl font-medium text-cm-moss md:text-2xl">
+            방문자 여러분께
           </p>
         </header>
 
         <div className="mt-10 space-y-8 text-left text-lg leading-relaxed text-cm-ink md:text-xl">
           <p>
-            방문자 여러분, 안녕하십니까. 청목노인요양센터 웹사이트를 찾아주셔서
-            진심으로 감사합니다.
+            안녕하십니까. 청목 장애인활동지원센터 웹사이트를 찾아주신 여러분께
+            진심으로 감사드립니다.
           </p>
           <p>
-            저희 청목노인요양센터는 고령이나 치매, 중풍 등 노인성 질병으로 인해
-            혼자서 일상생활을 영위하기 어려운 어르신들을 위해 설립된 전문
-            재가노인복지시설입니다. 어르신들의 각 가정으로 전문 요양보호사를
-            파견하여 일상에 꼭 필요한 방문요양 및 방문목욕 서비스를 제공하고
-            있습니다.
+            저희 청목 장애인활동지원센터는 신체적·정신적 장애 등의 사유로 혼자서
+            일상생활과 사회생활을 이어가기 어려우신 장애인분들께 전문적인 활동지원
+            서비스를 제공하기 위해 설립된 기관입니다.
           </p>
           <p>
-            저희 센터의 가장 큰 목표는 어르신들께서 가장 편안하게 느끼시는
-            &lsquo;가정&rsquo;에서 건강하고 안정된 노후를 보내실 수 있도록 돕는
-            것입니다. 더불어, 어르신을 보살피며 겪는 가족분들의 신체적, 심리적 수발
-            부담을 크게 덜어드림으로써 가족 모두의 삶의 질이 향상되도록 최선을 다하고
-            있습니다.
+            저희 센터는 장애인분들이 지역사회의 온전한 구성원으로서 주체적인 자립
+            생활을 실현하고, 활기차게 사회에 참여하실 수 있도록 돕는 것을 최우선
+            목표로 삼고 있습니다. 아울러 장애인을 곁에서 돌보시는 가족과
+            보호자분들의 부담을 함께 나누어, 장애인과 가족 모두가 안정되고 건강한
+            일상을 누리실 수 있도록 지원하고 있습니다.
           </p>
           <p>
-            &lsquo;항상 푸르고 깨끗하게 한결같으라&rsquo;는 청목(靑沐)의 의미처럼,
-            저희 임직원 모두는 내 부모님을 모시는 한결같은 정성과 맑은 마음으로
-            어르신들의 든든한 동반자가 되어 드릴 것을 약속드립니다.
+            앞으로도 저희 임직원과 전문 활동지원사 모두는 장애인분들이 차별받지
+            않고, 인간으로서의 존엄과 가치 있는 삶을 누리실 수 있도록 정성을 다해
+            모시겠습니다. 비장애인과 장애인이 더불어 행복한 완전 통합 사회를 이루는
+            그날까지, 늘 곁에서 든든한 동반자가 되어드리겠습니다.
           </p>
           <p>
-            앞으로도 어르신들의 평안하고 행복한 노후를 위해 끊임없이 노력하겠습니다.
-            여러분의 따뜻한 관심과 성원을 부탁드립니다.
+            여러분의 따뜻한 관심과 애정 어린 성원을 부탁드립니다.
           </p>
           <p className="font-medium">감사합니다.</p>
         </div>
 
         <footer className="mt-12 border-t border-cm-ink/10 pt-10 text-right">
           <p className="text-lg text-cm-deep md:text-xl">
-            청목노인요양센터장 조봉희 올림
+            청목 장애인활동지원센터장 김 경 훈 올림
           </p>
         </footer>
       </article>
 
       <nav
         className="mt-14 border-t border-cm-gold/30 pt-10"
-        aria-label="재가노인요양 하위 메뉴"
+        aria-label="청목 장애인활동지원 하위 메뉴"
       >
         <p className="text-left text-xs font-semibold uppercase tracking-[0.2em] text-cm-moss md:text-sm">
           안내 메뉴
@@ -68,7 +66,7 @@ export default function ElderlyCarePage() {
           <li>
             <Link
               className="rounded-sm underline decoration-cm-gold/30 underline-offset-[5px] transition-colors hover:text-cm-gold hover:decoration-cm-gold"
-              href="/elderly-care/info"
+              href="/disabled-support/cheongmok/info"
             >
               센터 소개
             </Link>
@@ -76,7 +74,7 @@ export default function ElderlyCarePage() {
           <li>
             <Link
               className="rounded-sm underline decoration-cm-gold/30 underline-offset-[5px] transition-colors hover:text-cm-gold hover:decoration-cm-gold"
-              href="/elderly-care/service"
+              href="/disabled-support/cheongmok/service"
             >
               서비스 안내
             </Link>
@@ -84,7 +82,7 @@ export default function ElderlyCarePage() {
           <li>
             <Link
               className="rounded-sm underline decoration-cm-gold/30 underline-offset-[5px] transition-colors hover:text-cm-gold hover:decoration-cm-gold"
-              href="/elderly-care/procedure"
+              href="/disabled-support/cheongmok/procedure"
             >
               이용 절차
             </Link>

@@ -82,22 +82,33 @@ export function Header() {
               </div>
               {item.children && openDropdown === item.href && (
                 <div
-                  className="absolute left-0 top-full min-w-[12rem] rounded-md border border-cm-ink/10 bg-cm-paper py-2 shadow-lg"
+                  className="absolute left-0 top-full min-w-[14rem] rounded-md border border-cm-ink/10 bg-cm-paper py-2 shadow-lg"
                   role="menu"
                 >
                   {item.children.map((c) => (
-                    <NavLink
-                      key={c.href}
-                      href={c.href}
-                      className={`block px-4 py-3 text-base transition-colors hover:bg-cm-cream ${
-                        pathname === c.href
-                          ? "font-semibold text-cm-deep"
-                          : "text-cm-ink"
-                      }`}
-                      role="menuitem"
-                    >
-                      {c.label}
-                    </NavLink>
+                    <div key={c.href} role="group">
+                      <NavLink
+                        href={c.href}
+                        className={`block px-4 py-3 text-base transition-colors hover:bg-cm-cream ${
+                          pathname === c.href
+                            ? "font-semibold text-cm-deep"
+                            : "text-cm-ink"
+                        }`}
+                        role="menuitem"
+                      >
+                        {c.label}
+                      </NavLink>
+                      {c.sub?.map((s) => (
+                        <NavLink
+                          key={s.href}
+                          href={s.href}
+                          className="block py-2 pl-8 pr-4 text-sm text-cm-moss transition-colors hover:bg-cm-cream hover:text-cm-deep"
+                          role="menuitem"
+                        >
+                          {s.label}
+                        </NavLink>
+                      ))}
+                    </div>
                   ))}
                 </div>
               )}
@@ -144,6 +155,21 @@ export function Header() {
                         >
                           {c.label}
                         </NavLink>
+                        {c.sub && c.sub.length > 0 ? (
+                          <ul className="mt-1 space-y-1 border-l border-cm-ink/15 pl-3">
+                            {c.sub.map((s) => (
+                              <li key={s.href}>
+                                <NavLink
+                                  href={s.href}
+                                  className="block min-h-10 py-1.5 text-sm text-cm-moss"
+                                  onClick={() => setMobileOpen(false)}
+                                >
+                                  {s.label}
+                                </NavLink>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
                       </li>
                     ))}
                   </ul>

@@ -25,9 +25,6 @@ export function AboutSpirit() {
           <br />
           그리고 <em className="not-italic font-bold text-cm-gold">한결같이</em>.&rdquo;
         </blockquote>
-        <p className="mt-10 text-base tracking-[0.15em] text-cm-sage">
-          — 법인 설립 취지 및 이사회 회의 용어 —
-        </p>
       </div>
     </section>
   );

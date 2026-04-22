@@ -1,3 +1,10 @@
+import {
+  corporationOffice,
+  disabilityCenterBusanjin,
+  disabilityCenterDongnae,
+  elderlyCareCenter,
+} from "@/lib/site-contact";
+
 export function Footer() {
   return (
     <footer
@@ -13,26 +20,87 @@ export function Footer() {
             맑고 화목한 기운으로, 한결같이
           </p>
         </div>
-        <dl className="mx-auto grid max-w-2xl gap-4 text-center text-base leading-relaxed md:grid-cols-1">
-          <div>
-            <dt className="sr-only">법인명</dt>
-            <dd>사회복지법인 청목원</dd>
-          </div>
-          <div>
-            <dt className="sr-only">주소</dt>
-            <dd>[주소 자리표시자]</dd>
-          </div>
-          <div>
-            <dt className="sr-only">연락처</dt>
-            <dd>
-              대표전화 [자리표시자] · 팩스 [자리표시자]
-              <br />
-              이메일 [자리표시자]
-            </dd>
-          </div>
-        </dl>
+
+        <div className="mx-auto grid max-w-3xl gap-10 text-left text-base leading-relaxed md:gap-12">
+          <section>
+            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+              {corporationOffice.title}
+            </h2>
+            <p className="mt-3 text-cm-sage/95">
+              <span className="sr-only">주소 </span>
+              <span className="block">{corporationOffice.addressStreet}</span>
+              <span className="mt-2 block text-sm text-cm-sage/85">
+                {corporationOffice.addressJibun}
+              </span>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+              {disabilityCenterDongnae.title}{" "}
+              <span className="text-base font-normal text-cm-moss">
+                ({disabilityCenterDongnae.subtitle})
+              </span>
+            </h2>
+            <p className="mt-3 text-cm-sage/95">
+              <span className="block">
+                주소 {disabilityCenterDongnae.address}
+              </span>
+              <span className="mt-2 block">
+                Tel{" "}
+                <a
+                  href={`tel:${disabilityCenterDongnae.tel.replace(/-/g, "")}`}
+                  className="text-cm-cream underline decoration-cm-gold/40 underline-offset-2 hover:decoration-cm-gold"
+                >
+                  {disabilityCenterDongnae.tel}
+                </a>
+                {" · "}
+                Fax {disabilityCenterDongnae.fax}
+              </span>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+              {disabilityCenterBusanjin.title}{" "}
+              <span className="text-base font-normal text-cm-moss">
+                ({disabilityCenterBusanjin.subtitle})
+              </span>
+            </h2>
+            <p className="mt-3 text-cm-sage/95">
+              <span className="block">
+                주소 {disabilityCenterBusanjin.address}
+              </span>
+              <span className="mt-2 block">
+                Tel{" "}
+                <a
+                  href={`tel:${disabilityCenterBusanjin.tel.replace(/-/g, "")}`}
+                  className="text-cm-cream underline decoration-cm-gold/40 underline-offset-2 hover:decoration-cm-gold"
+                >
+                  {disabilityCenterBusanjin.tel}
+                </a>
+                {" · "}
+                Fax {disabilityCenterBusanjin.fax}
+              </span>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+              {elderlyCareCenter.title}
+            </h2>
+            <p className="mt-3 text-cm-sage/95">
+              <span className="block">주소 {elderlyCareCenter.address}</span>
+              <span className="mt-2 block text-sm text-cm-moss/95">
+                ※ {elderlyCareCenter.addressNote}
+              </span>
+            </p>
+          </section>
+        </div>
+
         <p className="mt-10 border-t border-cm-sage/20 pt-8 text-center text-sm tracking-wide text-cm-moss">
-          © {new Date().getFullYear()} 사회복지법인 청목원 · CHEONGMOKWON. All Rights Reserved.
+          © {new Date().getFullYear()} 사회복지법인 청목원 · CHEONGMOKWON. All Rights
+          Reserved.
         </p>
       </div>
     </footer>

@@ -27,14 +27,16 @@ export default function HomePage() {
           한결같이
         </h1>
         <p className="mt-8 max-w-2xl text-lg leading-relaxed text-cm-ink md:text-xl">
-          청목(青沐)은 항상 푸르고 깨끗하게 한결같으라는 뜻을 담고 있습니다. 재가노인요양과
-          장애인활동지원으로 지역과 함께 걷겠습니다.
+          청목(青沐)은 항상 푸르고 깨끗하게 한결같으라는 뜻을 담고 있습니다.
+          <span className="mt-2 block">
+            재가노인요양과 장애인활동지원으로 지역과 함께 걷겠습니다.
+          </span>
         </p>
         <Link
           href="/about"
           className="mt-10 inline-flex min-h-12 items-center gap-2 rounded-md border-2 border-cm-deep bg-cm-deep px-6 text-base font-semibold text-cm-cream transition-colors hover:bg-cm-deep/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cm-gold"
         >
-          법인 소개
+          청목원
           <ArrowRight className="size-5" aria-hidden />
         </Link>
       </section>

@@ -1,22 +1,30 @@
+import Image from "next/image";
+
 function TreeIconWinter() {
   return (
-    <svg viewBox="0 0 80 80" className="h-20 w-20" aria-hidden>
-      <ellipse cx="40" cy="32" rx="26" ry="24" fill="#2d4a3a" />
-      <ellipse cx="30" cy="28" rx="8" ry="6" fill="#5a7a5a" opacity="0.6" />
-      <ellipse cx="48" cy="34" rx="7" ry="5" fill="#5a7a5a" opacity="0.6" />
-      <rect x="37" y="54" width="6" height="20" fill="#6b5337" />
-    </svg>
+    <div className="relative h-24 w-24">
+      <Image
+        src="/dongcheongmok.png"
+        alt="동청목 나무"
+        fill
+        sizes="96px"
+        className="object-contain drop-shadow-sm"
+      />
+    </div>
   );
 }
 
 function TreeIconGold() {
   return (
-    <svg viewBox="0 0 80 80" className="h-20 w-20" aria-hidden>
-      <ellipse cx="40" cy="32" rx="26" ry="24" fill="#b8985a" />
-      <ellipse cx="30" cy="28" rx="8" ry="6" fill="#d4b876" opacity="0.7" />
-      <ellipse cx="48" cy="34" rx="7" ry="5" fill="#2d4a3a" opacity="0.5" />
-      <rect x="37" y="54" width="6" height="20" fill="#6b5337" />
-    </svg>
+    <div className="relative h-24 w-24">
+      <Image
+        src="/cheongmokgold.png"
+        alt="청목황금나무"
+        fill
+        sizes="96px"
+        className="object-contain drop-shadow-sm"
+      />
+    </div>
   );
 }
 
