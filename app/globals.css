@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -35,6 +34,8 @@ body {
   color: var(--foreground);
   font-size: 1.0625rem;
   line-height: 1.75;
+  font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Focus visibility for keyboard users */
@@ -44,10 +45,12 @@ body {
 }
 
 @layer utilities {
+  /* 고운바탕: 차분한 명조 계열 (제목·강조) */
   .font-myeongjo {
-    font-family: "Nanum Myeongjo", ui-serif, serif;
+    font-family: var(--font-display), "Apple SD Gothic Neo", "Malgun Gothic", serif;
   }
+  /* 노토 산스 KR: 본문·UI 가독성, 굵기 단계 지원 */
   .font-body {
-    font-family: "Noto Serif KR", ui-serif, serif;
+    font-family: var(--font-sans), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   }
 }

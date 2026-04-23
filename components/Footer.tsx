@@ -23,26 +23,26 @@ export function Footer() {
 
         <div className="mx-auto grid max-w-3xl gap-10 text-left text-base leading-relaxed md:gap-12">
           <section>
-            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+            <h2 className="font-myeongjo text-lg font-bold leading-snug text-cm-cream">
               {corporationOffice.title}
             </h2>
-            <p className="mt-3 text-cm-sage/95">
+            <p className="mt-3 text-cm-sage">
               <span className="sr-only">주소 </span>
               <span className="block">{corporationOffice.addressStreet}</span>
-              <span className="mt-2 block text-sm text-cm-sage/85">
+              <span className="mt-2 block text-sm text-cm-sage/90">
                 {corporationOffice.addressJibun}
               </span>
             </p>
           </section>
 
           <section>
-            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+            <h2 className="font-myeongjo text-lg font-bold leading-snug text-cm-cream">
               {disabilityCenterDongnae.title}{" "}
-              <span className="text-base font-normal text-cm-moss">
+              <span className="text-base font-medium text-cm-sage">
                 ({disabilityCenterDongnae.subtitle})
               </span>
             </h2>
-            <p className="mt-3 text-cm-sage/95">
+            <p className="mt-3 text-cm-sage">
               <span className="block">
                 주소 {disabilityCenterDongnae.address}
               </span>
@@ -61,13 +61,13 @@ export function Footer() {
           </section>
 
           <section>
-            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+            <h2 className="font-myeongjo text-lg font-bold leading-snug text-cm-cream">
               {disabilityCenterBusanjin.title}{" "}
-              <span className="text-base font-normal text-cm-moss">
+              <span className="text-base font-medium text-cm-sage">
                 ({disabilityCenterBusanjin.subtitle})
               </span>
             </h2>
-            <p className="mt-3 text-cm-sage/95">
+            <p className="mt-3 text-cm-sage">
               <span className="block">
                 주소 {disabilityCenterBusanjin.address}
               </span>
@@ -86,19 +86,19 @@ export function Footer() {
           </section>
 
           <section>
-            <h2 className="font-myeongjo text-lg font-bold text-cm-cream">
+            <h2 className="font-myeongjo text-lg font-bold leading-snug text-cm-cream">
               {elderlyCareCenter.title}
             </h2>
-            <p className="mt-3 text-cm-sage/95">
+            <p className="mt-3 text-cm-sage">
               <span className="block">주소 {elderlyCareCenter.address}</span>
-              <span className="mt-2 block text-sm text-cm-moss/95">
+              <span className="mt-2 block text-sm text-cm-sage/90">
                 ※ {elderlyCareCenter.addressNote}
               </span>
             </p>
           </section>
         </div>
 
-        <p className="mt-10 border-t border-cm-sage/20 pt-8 text-center text-sm tracking-wide text-cm-moss">
+        <p className="mt-10 border-t border-cm-sage/20 pt-8 text-center text-sm tracking-wide text-cm-sage/85">
           © {new Date().getFullYear()} 사회복지법인 청목원 · CHEONGMOKWON. All Rights
           Reserved.
         </p>
